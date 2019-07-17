@@ -1,7 +1,8 @@
-package com.dozen.dozenworld
+package com.dozen.dozenworld.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.dozen.dozenworld.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

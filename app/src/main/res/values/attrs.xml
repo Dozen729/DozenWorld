@@ -1,0 +1,18 @@
+<resources>
+    <declare-styleable name="HelloView">
+        <attr name="exampleString" format="string" />
+        <attr name="exampleDimension" format="dimension" />
+        <attr name="exampleColor" format="color" />
+        <attr name="exampleDrawable" format="color|reference" />
+    </declare-styleable>
+    <declare-styleable name="BaseChartView">
+        <attr name="title" format="string"/>
+        <attr name="xName" format="string"/>
+        <attr name="yName" format="string"/>
+        <attr name="titleSize" format="dimension|integer"/>
+    </declare-styleable>
+    <declare-styleable name="HeadView">
+        <attr name="name" format="string"></attr>
+        <attr name="picture" format="color|reference"></attr>
+    </declare-styleable>
+</resources>
