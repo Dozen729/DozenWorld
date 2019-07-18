@@ -11,5 +11,5 @@
         android:layout_width="302dp"
         android:layout_height="500dp"
         app:name="head"
-        app:picture="@drawable/ic_launcher_background" />
+        app:picture="@drawable/icon" />
 </LinearLayout>

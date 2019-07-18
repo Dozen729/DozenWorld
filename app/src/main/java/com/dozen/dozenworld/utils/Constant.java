@@ -4,6 +4,7 @@ import com.dozen.dozenworld.activity.ChartActivity;
 import com.dozen.dozenworld.activity.HeadActivity;
 import com.dozen.dozenworld.activity.HelloActivity;
 import com.dozen.dozenworld.activity.MainActivity;
+import com.dozen.dozenworld.activity.MenuActivity;
 import com.dozen.dozenworld.activity.SectorActivity;
 import com.dozen.dozenworld.bean.StartItem;
 
@@ -17,7 +18,9 @@ import java.util.List;
 public class Constant {
 
     private static String[] mList=new String[]{
-        "MAIN","HELLO","CHART","SECTOR","HEAD"
+        "MAIN","HELLO","CHART","SECTOR","HEAD",
+
+        "MENU",
     };
 
     public static List<StartItem> getDataList(){
@@ -49,6 +52,10 @@ public class Constant {
                 case "HEAD":
                     item.setCla(HeadActivity.class);
                     item.setName("圆形头像");
+                    break;
+                case "MENU":
+                    item.setCla(MenuActivity.class);
+                    item.setName("下拉菜单");
                     break;
                     default:continue;
             }

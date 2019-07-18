@@ -12,7 +12,22 @@
         <attr name="titleSize" format="dimension|integer"/>
     </declare-styleable>
     <declare-styleable name="HeadView">
-        <attr name="name" format="string"></attr>
-        <attr name="picture" format="color|reference"></attr>
+        <attr name="name" format="string" />
+        <attr name="picture" format="color|reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="DropDownMenu">
+        <attr name="underlineColor" format="color"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="textSelectedColor" format="color"/>
+        <attr name="textUnSelectedColor" format="color"/>
+        <attr name="menuBackgroundColor" format="color"/>
+        <attr name="maskColor" format="color"/>
+        <attr name="menuTextSize" format="dimension"/>
+        <attr name="menuSelectedIcon" format="reference"/>
+        <attr name="menuUnSelectedIcon" format="reference"/>
+
+
     </declare-styleable>
 </resources>
