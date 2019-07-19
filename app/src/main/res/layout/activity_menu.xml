@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.dozen.dozenworld.custom.menu.DropDownMenu xmlns:android="http://schemas.android.com/apk/res/android"
+<com.dozen.dozenworld.custom.DropDownMenu xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/dropDownMenu"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:menuTextSize="14sp"
 
-    app:menuSelectedIcon="@drawable/icon"
-    app:menuUnSelectedIcon="@mipmap/ic_launcher"
+    app:menuSelectedIcon="@drawable/menu_select"
+    app:menuUnSelectedIcon="@drawable/menu_un_select"
 
     >
 
-</com.dozen.dozenworld.custom.menu.DropDownMenu>
+</com.dozen.dozenworld.custom.DropDownMenu>

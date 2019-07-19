@@ -1,7 +1,8 @@
-package com.dozen.dozenworld.custom.menu;
+package com.dozen.dozenworld.custom;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
@@ -101,14 +102,14 @@ public class DropDownMenu extends LinearLayout {
 
         //创建下划线
         View underlineView=new View(context);
-        underlineView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,dp2Px(1.0f)));
+        underlineView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,dp2Px(2.0f)));
         underlineView.setBackgroundColor(underlineColor);
         addView(underlineView,1);
 
         //初始化containerView
-        contentView=new FrameLayout(context);
-        contentView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
-        addView(contentView,2);
+        containerView=new FrameLayout(context);
+        containerView.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+        addView(containerView,2);
 
 
     }
@@ -135,7 +136,7 @@ public class DropDownMenu extends LinearLayout {
         containerView.addView(contentView,0);
 
         maskView=new View(getContext());
-        maskView.setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+        maskView.setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
         maskView.setBackgroundColor(maskColor);
         maskView.setOnClickListener(new OnClickListener() {
             @Override
@@ -152,7 +153,8 @@ public class DropDownMenu extends LinearLayout {
 
 
         for (int i = 0; i < popupViews.size(); i++) {
-            popupViews.get(i).setLayoutParams(new FrameLayout.LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.MATCH_PARENT));
+            popupViews.get(i).setLayoutParams(new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.WRAP_CONTENT));
+            popupViews.get(i).setBackgroundColor(Color.WHITE);
             popupMenuViews.addView(popupViews.get(i),i);
         }
 
@@ -183,9 +185,9 @@ public class DropDownMenu extends LinearLayout {
         //添加分割线
         if (i<tabTextsList.size()-1){
             View underlineView=new View(getContext());
-            underlineView.setLayoutParams(new LayoutParams(dp2Px(0.5f),LayoutParams.MATCH_PARENT));
+            underlineView.setLayoutParams(new LayoutParams(dp2Px(1f),LayoutParams.MATCH_PARENT));
             underlineView.setBackgroundColor(dividerColor);
-            addView(underlineView);
+            tabMenuView.addView(underlineView);
         }
 
     }
@@ -234,7 +236,7 @@ public class DropDownMenu extends LinearLayout {
     }
 
 
-    private void closeMenu() {
+    public void closeMenu() {
         if (currentTabPosition!=-1){
             ((TextView)tabMenuView.getChildAt(currentTabPosition)).setTextColor(textUnSelectColor);
             ((TextView)tabMenuView.getChildAt(currentTabPosition)).setCompoundDrawablesWithIntrinsicBounds(null,null,getResources().getDrawable(menuUnSelectedIcon),null);
@@ -249,4 +251,11 @@ public class DropDownMenu extends LinearLayout {
         }
     }
 
+    public boolean isShowing(){
+        return currentTabPosition!=-1;
+    }
+
+    public void setContentView(String city) {
+        ((TextView)contentView).setText(city);
+    }
 }
