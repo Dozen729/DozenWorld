@@ -1,5 +1,6 @@
 package com.dozen.dozenworld.utils;
 
+import com.dozen.dozenworld.activity.BannerActivity;
 import com.dozen.dozenworld.activity.ChartActivity;
 import com.dozen.dozenworld.activity.HeadActivity;
 import com.dozen.dozenworld.activity.HelloActivity;
@@ -20,7 +21,7 @@ public class Constant {
     private static String[] mList=new String[]{
         "MAIN","HELLO","CHART","SECTOR","HEAD",
 
-        "MENU",
+        "MENU","BANNER"
     };
 
     public static List<StartItem> getDataList(){
@@ -56,6 +57,10 @@ public class Constant {
                 case "MENU":
                     item.setCla(MenuActivity.class);
                     item.setName("下拉菜单");
+                    break;
+                case "BANNER":
+                    item.setCla(BannerActivity.class);
+                    item.setName("轮播图");
                     break;
                     default:continue;
             }
