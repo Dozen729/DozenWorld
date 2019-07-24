@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.dozen.dozenworld">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -20,6 +22,18 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".project.music.MusicReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="last"/>
+                <action android:name="stop"/>
+                <action android:name="play"/>
+                <action android:name="next"/>
+                <action android:name="close"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".project.music.PlayerService"/>
+
         <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.HelloActivity"/>
         <activity android:name=".activity.ChartActivity"/>
@@ -27,6 +41,7 @@
         <activity android:name=".activity.HeadActivity"/>
         <activity android:name=".activity.MenuActivity"/>
         <activity android:name=".activity.BannerActivity"/>
+        <activity android:name=".activity.MusicActivity"/>
 
 
     </application>

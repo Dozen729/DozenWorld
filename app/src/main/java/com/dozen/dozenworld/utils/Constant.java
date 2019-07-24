@@ -6,6 +6,7 @@ import com.dozen.dozenworld.activity.HeadActivity;
 import com.dozen.dozenworld.activity.HelloActivity;
 import com.dozen.dozenworld.activity.MainActivity;
 import com.dozen.dozenworld.activity.MenuActivity;
+import com.dozen.dozenworld.activity.MusicActivity;
 import com.dozen.dozenworld.activity.SectorActivity;
 import com.dozen.dozenworld.bean.StartItem;
 
@@ -21,7 +22,7 @@ public class Constant {
     private static String[] mList=new String[]{
         "MAIN","HELLO","CHART","SECTOR","HEAD",
 
-        "MENU","BANNER"
+        "MENU","BANNER","MUSIC"
     };
 
     public static List<StartItem> getDataList(){
@@ -61,6 +62,10 @@ public class Constant {
                 case "BANNER":
                     item.setCla(BannerActivity.class);
                     item.setName("轮播图");
+                    break;
+                case "MUSIC":
+                    item.setCla(MusicActivity.class);
+                    item.setName("音乐播放");
                     break;
                     default:continue;
             }
