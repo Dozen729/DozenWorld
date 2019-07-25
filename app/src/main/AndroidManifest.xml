@@ -4,6 +4,7 @@
     package="com.dozen.dozenworld">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
         android:name=".MyApplication"
@@ -33,6 +34,7 @@
             </intent-filter>
         </receiver>
         <service android:name=".project.music.PlayerService"/>
+        <service android:name=".project.suspend.SuspendService"/>
 
         <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.HelloActivity"/>
@@ -42,6 +44,7 @@
         <activity android:name=".activity.MenuActivity"/>
         <activity android:name=".activity.BannerActivity"/>
         <activity android:name=".activity.MusicActivity"/>
+        <activity android:name=".activity.SuspendActivity"/>
 
 
     </application>
