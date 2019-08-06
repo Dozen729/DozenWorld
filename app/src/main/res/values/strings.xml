@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">DozenWorld</string>
+
+    <string name="system_cache">System Cache</string>
+    <string name="running_app">Running App</string>
+    <string name="cache_junk">Cache Junk</string>
+    <string name="unuseful_apk">Unsueful Apk</string>
+    <string name="temp_file">Temp File</string>
+    <string name="log">Log</string>
+    <string name="big_file">Big File</string>
 </resources>

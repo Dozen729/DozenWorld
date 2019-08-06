@@ -2,6 +2,7 @@ package com.dozen.dozenworld.utils;
 
 import com.dozen.dozenworld.activity.BannerActivity;
 import com.dozen.dozenworld.activity.ChartActivity;
+import com.dozen.dozenworld.activity.CleanActivity;
 import com.dozen.dozenworld.activity.HeadActivity;
 import com.dozen.dozenworld.activity.HelloActivity;
 import com.dozen.dozenworld.activity.MainActivity;
@@ -20,10 +21,14 @@ import java.util.List;
  */
 public class Constant {
 
+    public static final int TYPE_TITLE = 0;
+    public static final int TYPE_CHILD = 1;
+
+
     private static String[] mList=new String[]{
         "MAIN","HELLO","CHART","SECTOR","HEAD",
 
-        "MENU","BANNER","MUSIC","SUSPEND"
+        "MENU","BANNER","MUSIC","SUSPEND","CLEAN"
     };
 
     public static List<StartItem> getDataList(){
@@ -71,6 +76,10 @@ public class Constant {
                 case "SUSPEND":
                     item.setCla(SuspendActivity.class);
                     item.setName("悬浮球");
+                    break;
+                case "CLEAN":
+                    item.setCla(CleanActivity.class);
+                    item.setName("清理垃圾");
                     break;
                     default:continue;
             }

@@ -4,7 +4,14 @@
     package="com.dozen.dozenworld">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <uses-permission android:name="android.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:name=".MyApplication"
@@ -45,6 +52,7 @@
         <activity android:name=".activity.BannerActivity"/>
         <activity android:name=".activity.MusicActivity"/>
         <activity android:name=".activity.SuspendActivity"/>
+        <activity android:name=".activity.CleanActivity"/>
 
 
     </application>

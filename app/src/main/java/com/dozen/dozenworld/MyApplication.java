@@ -1,6 +1,7 @@
 package com.dozen.dozenworld;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.dozen.dozenworld.utils.T;
 
@@ -9,9 +10,22 @@ import com.dozen.dozenworld.utils.T;
  * Describe:
  */
 public class MyApplication extends Application {
+
+    public static MyApplication sContext;
+    public static int sHeight;
+    public static int sWidth;
+    private static final String TAG = "App";
+
     @Override
     public void onCreate() {
         super.onCreate();
         T.setContext(getApplicationContext());
+
+        sContext=this;
     }
+
+    public static Context getAppContext() {
+        return sContext;
+    }
+
 }
