@@ -53,6 +53,7 @@
         <activity android:name=".activity.MusicActivity"/>
         <activity android:name=".activity.SuspendActivity"/>
         <activity android:name=".activity.CleanActivity"/>
+        <activity android:name=".activity.SignActivity"/>
 
 
     </application>

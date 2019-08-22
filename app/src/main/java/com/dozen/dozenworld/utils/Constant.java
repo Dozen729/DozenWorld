@@ -9,6 +9,7 @@ import com.dozen.dozenworld.activity.MainActivity;
 import com.dozen.dozenworld.activity.MenuActivity;
 import com.dozen.dozenworld.activity.MusicActivity;
 import com.dozen.dozenworld.activity.SectorActivity;
+import com.dozen.dozenworld.activity.SignActivity;
 import com.dozen.dozenworld.activity.SuspendActivity;
 import com.dozen.dozenworld.bean.StartItem;
 
@@ -28,7 +29,9 @@ public class Constant {
     private static String[] mList=new String[]{
         "MAIN","HELLO","CHART","SECTOR","HEAD",
 
-        "MENU","BANNER","MUSIC","SUSPEND","CLEAN"
+        "MENU","BANNER","MUSIC","SUSPEND","CLEAN",
+
+        "SIGN"
     };
 
     public static List<StartItem> getDataList(){
@@ -80,6 +83,10 @@ public class Constant {
                 case "CLEAN":
                     item.setCla(CleanActivity.class);
                     item.setName("清理垃圾");
+                    break;
+                case "SIGN":
+                    item.setCla(SignActivity.class);
+                    item.setName("查看应用签名");
                     break;
                     default:continue;
             }
