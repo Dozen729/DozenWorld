@@ -8,6 +8,7 @@ import com.dozen.dozenworld.activity.HelloActivity;
 import com.dozen.dozenworld.activity.MainActivity;
 import com.dozen.dozenworld.activity.MenuActivity;
 import com.dozen.dozenworld.activity.MusicActivity;
+import com.dozen.dozenworld.activity.PullActivity;
 import com.dozen.dozenworld.activity.SectorActivity;
 import com.dozen.dozenworld.activity.SignActivity;
 import com.dozen.dozenworld.activity.SuspendActivity;
@@ -26,24 +27,24 @@ public class Constant {
     public static final int TYPE_CHILD = 1;
 
 
-    private static String[] mList=new String[]{
-        "MAIN","HELLO","CHART","SECTOR","HEAD",
+    private static String[] mList = new String[]{
+            "MAIN", "HELLO", "CHART", "SECTOR", "HEAD",
 
-        "MENU","BANNER","MUSIC","SUSPEND","CLEAN",
+            "MENU", "BANNER", "MUSIC", "SUSPEND", "CLEAN",
 
-        "SIGN"
+            "SIGN", "PULL"
     };
 
-    public static List<StartItem> getDataList(){
-        List<StartItem> list=new ArrayList<>();
+    public static List<StartItem> getDataList() {
+        List<StartItem> list = new ArrayList<>();
 
         for (int i = 0; i < mList.length; i++) {
 
-            StartItem item=new StartItem();
-            item.setID(i+1);
+            StartItem item = new StartItem();
+            item.setID(i + 1);
             item.setTitle(mList[i]);
 
-            switch (mList[i]){
+            switch (mList[i]) {
                 case "MAIN":
                     item.setCla(MainActivity.class);
                     item.setName("Hello C++");
@@ -88,12 +89,16 @@ public class Constant {
                     item.setCla(SignActivity.class);
                     item.setName("查看应用签名");
                     break;
-                    default:continue;
+                case "PULL":
+                    item.setCla(PullActivity.class);
+                    item.setName("下拉动画");
+                    break;
+                default:
+                    continue;
             }
 
             list.add(item);
         }
-
 
 
         return list;
