@@ -3,13 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.dozen.dozenworld">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.UNINSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <application
         android:name=".MyApplication"
         android:allowBackup="true"
@@ -19,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activity.LooperActivity"></activity>
         <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +21,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.MainActivity" />
+
+        <activity android:name=".activity.HelloActivity" />
+        <activity android:name=".activity.ChartActivity" />
+
+        <activity android:name=".activity.SectorActivity" />
+        <activity android:name=".activity.HeadActivity" />
+        <activity android:name=".activity.MenuActivity" />
+        <activity android:name=".activity.BannerActivity" />
+        <activity android:name=".activity.MusicActivity" />
+        <activity android:name=".activity.SuspendActivity" />
+        <activity android:name=".activity.CleanActivity" />
+        <activity android:name=".activity.SignActivity" />
+        <activity android:name=".activity.PullActivity" />
         <receiver
             android:name=".project.music.MusicReceiver"
             android:exported="true">
@@ -38,22 +46,16 @@
                 <action android:name="close" />
             </intent-filter>
         </receiver>
-
         <service android:name=".project.music.PlayerService" />
         <service android:name=".project.suspend.SuspendService" />
-
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.HelloActivity" />
-        <activity android:name=".activity.ChartActivity" />
-        <activity android:name=".activity.SectorActivity" />
-        <activity android:name=".activity.HeadActivity" />
-        <activity android:name=".activity.MenuActivity" />
-        <activity android:name=".activity.BannerActivity" />
-        <activity android:name=".activity.MusicActivity" />
-        <activity android:name=".activity.SuspendActivity" />
-        <activity android:name=".activity.CleanActivity" />
-        <activity android:name=".activity.SignActivity" />
-        <activity android:name=".activity.PullActivity" />
     </application>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
 </manifest>

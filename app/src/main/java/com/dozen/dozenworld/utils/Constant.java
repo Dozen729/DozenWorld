@@ -5,6 +5,7 @@ import com.dozen.dozenworld.activity.ChartActivity;
 import com.dozen.dozenworld.activity.CleanActivity;
 import com.dozen.dozenworld.activity.HeadActivity;
 import com.dozen.dozenworld.activity.HelloActivity;
+import com.dozen.dozenworld.activity.LooperActivity;
 import com.dozen.dozenworld.activity.MainActivity;
 import com.dozen.dozenworld.activity.MenuActivity;
 import com.dozen.dozenworld.activity.MusicActivity;
@@ -32,7 +33,7 @@ public class Constant {
 
             "MENU", "BANNER", "MUSIC", "SUSPEND", "CLEAN",
 
-            "SIGN", "PULL"
+            "SIGN", "PULL","LOOPER"
     };
 
     public static List<StartItem> getDataList() {
@@ -92,6 +93,10 @@ public class Constant {
                 case "PULL":
                     item.setCla(PullActivity.class);
                     item.setName("下拉动画");
+                    break;
+                case "LOOPER":
+                    item.setCla(LooperActivity.class);
+                    item.setName("循环列表");
                     break;
                 default:
                     continue;

@@ -1,5 +1,6 @@
 package com.dozen.dozenworld.custom;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -18,6 +19,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.dozen.dozenworld.R;
 
@@ -25,7 +27,8 @@ import com.dozen.dozenworld.R;
  * Created by Dozen on 19-7-17.
  * Describe:
  */
-public class HeadView extends View {
+@SuppressLint("AppCompatCustomView")
+public class HeadView extends ImageView {
 
     private String name;
     private Drawable picture;
@@ -110,6 +113,13 @@ public class HeadView extends View {
         bitmapShader.setLocalMatrix(matrix);
         paint.setShader(bitmapShader);
         canvas.drawCircle(mins, mins, mins, paint);
+
+    }
+
+    public void setPicture(Drawable picture) {
+        this.picture = picture;
+
+        invalidate();
 
     }
 
